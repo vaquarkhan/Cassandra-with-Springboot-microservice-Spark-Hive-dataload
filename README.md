@@ -34,6 +34,7 @@ In Cassandra this matters because the data in a particular column family is stor
 - https://tech.ebayinc.com/engineering/cassandra-data-modeling-best-practices-part-1/
 - https://tech.ebayinc.com/engineering/cassandra-data-modeling-best-practices-part-2/
 - https://www.datastax.com/blog/2015/02/basic-rules-cassandra-data-modeling
+- https://intellipaat.com/blog/tutorial/cassandra-tutorial/non-relational-cassandra-data-model/
 - https://www.youtube.com/watch?v=n-BXDdum0Kk
 - https://stackoverflow.com/questions/41844770/understanding-cassandra-data-model
 - https://stackoverflow.com/questions/3245267/column-family-concept-and-data-model
