@@ -37,5 +37,6 @@ In Cassandra this matters because the data in a particular column family is stor
 - https://www.youtube.com/watch?v=n-BXDdum0Kk
 - https://stackoverflow.com/questions/41844770/understanding-cassandra-data-model
 - https://stackoverflow.com/questions/3245267/column-family-concept-and-data-model
+- https://stackoverflow.com/questions/41844770/understanding-cassandra-data-model
 - https://www.javahotchocolate.com/notes/cassandra.html
 - https://www.youtube.com/watch?v=Mvsy2DZhKSw
