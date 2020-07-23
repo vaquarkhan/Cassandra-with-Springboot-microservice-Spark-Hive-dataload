@@ -41,3 +41,11 @@ In Cassandra this matters because the data in a particular column family is stor
 - https://stackoverflow.com/questions/41844770/understanding-cassandra-data-model
 - https://www.javahotchocolate.com/notes/cassandra.html
 - https://www.youtube.com/watch?v=Mvsy2DZhKSw
+- https://github.com/danielschulz/Cassandra-Cheat-Sheet/blob/master/Cassandra-Cheat-Sheets.pdf
+- https://github.com/cr3ativ3-d3v3lop3r/cassandra-cheat-sheet
+- https://github.com/sunilsoni/Cassandra-Data-Modeling
+- https://gist.github.com/korya/706a59a63cf9a4238674
+- https://github.com/Anant/awesome-cassandra
+- https://github.com/datastax/management-api-for-apache-cassandra
+- https://github.com/allegro/cassandra-modeling-kata
+- https://github.com/apache/cassandra
