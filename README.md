@@ -26,6 +26,21 @@ A column family is a database object that contains columns of related data. It i
 In Cassandra this matters because the data in a particular column family is stored in the same files on disk - so it is more efficient to place data items that are likely to be retrieved together, in the same ColumnFamily. This is partly a practical speed concern, but also a matter of organising your data into a clear schema. This touches upon your second definition - one might consider all the data about a particular key to be a "row", but partitioned by Column Family. However, in Cassandra it is not really a single row, because the data in one ColumnFamily can be changed independently of the data in other ColumnFamilies for the same row key.
 
 
+### Keyspace :
+A keyspace in Cassandra is a namespace that defines data replication on nodes. A cluster contains one keyspace per node.The CREATE KEYSPACE statement has two properties: replication and durable_writes.
+
+              CREATE KEYSPACE <identifier> WITH <properties>
+              
+              CREATE KEYSPACE “KeySpace Name” WITH replication = {'class': ‘Strategy name’, 'replication_factor' : ‘No.Of   replicas’};
+
+              CREATE KEYSPACE “KeySpace Name” WITH replication = {'class': ‘Strategy name’, 'replication_factor' : ‘No.Of  replicas’} AND durable_writes = ‘Boolean value’;
+
+              
+Example :   
+
+         CREATE KEYSPACE Vkhan WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
+
+
 
 
 ----------------------------------------------------------------
