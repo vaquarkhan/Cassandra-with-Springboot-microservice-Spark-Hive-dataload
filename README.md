@@ -41,6 +41,13 @@ Example :
          CREATE KEYSPACE Vkhan WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
 
 
+### Creating a Table:
+
+                      CREATE (TABLE | COLUMNFAMILY) <tablename>
+                      ('<column-definition>' , '<column-definition>')
+                      (WITH <option> AND <option>)
+
+
 
 
 ----------------------------------------------------------------
