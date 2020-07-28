@@ -48,7 +48,32 @@ Example :
                       (WITH <option> AND <option>)
 
 
+A Cassandra column family has the following attributes −
 
+### keys_cached − 
+
+It represents the number of locations to keep cached per SSTable.
+
+### rows_cached − 
+
+It represents the number of rows whose entire contents will be cached in memory.
+
+### preload_row_cache − 
+It specifies whether you want to pre-populate the row cache.
+
+### Column
+column has three values in Cassandra
+
+- key or column name
+- value
+- time stamp
+
+### SuperColumn
+
+super column stores a map of sub-columns,super column help to store all column family in same location.
+
+- name [byte]
+- cols:map<byte[],column>
 
 ----------------------------------------------------------------
 
@@ -71,3 +96,4 @@ Example :
 - https://github.com/datastax/management-api-for-apache-cassandra
 - https://github.com/allegro/cassandra-modeling-kata
 - https://github.com/apache/cassandra
+- https://www.tutorialspoint.com/cassandra/cassandra_data_model.htm
