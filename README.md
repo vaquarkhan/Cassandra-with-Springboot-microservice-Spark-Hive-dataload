@@ -77,7 +77,7 @@ super column stores a map of sub-columns,super column help to store all column f
 
 ----------------------------------------------------------------
 
-
+- https://pkghosh.wordpress.com/2011/03/02/cassandra-secondary-index-patterns/
 - https://tech.ebayinc.com/engineering/cassandra-data-modeling-best-practices-part-1/
 - https://tech.ebayinc.com/engineering/cassandra-data-modeling-best-practices-part-2/
 - https://www.datastax.com/blog/2015/02/basic-rules-cassandra-data-modeling
