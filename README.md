@@ -25,6 +25,25 @@ A column family is a database object that contains columns of related data. It i
 
 In Cassandra this matters because the data in a particular column family is stored in the same files on disk - so it is more efficient to place data items that are likely to be retrieved together, in the same ColumnFamily. This is partly a practical speed concern, but also a matter of organising your data into a clear schema. This touches upon your second definition - one might consider all the data about a particular key to be a "row", but partitioned by Column Family. However, in Cassandra it is not really a single row, because the data in one ColumnFamily can be changed independently of the data in other ColumnFamilies for the same row key.
 
+### Components of Cassandra
+
+The key components of Cassandra are as follows −
+
+### Node − It is the place where data is stored.
+
+### Data center − It is a collection of related nodes.
+
+### Cluster − A cluster is a component that contains one or more data centers.
+
+### Commit log − The commit log is a crash-recovery mechanism in Cassandra. Every write operation is written to the commit log.
+
+### Mem-table − A mem-table is a memory-resident data structure. After commit log, the data will be written to the mem-table. Sometimes, for a single-column family, there will be multiple mem-tables.
+
+### SSTable − It is a disk file to which the data is flushed from the mem-table when its contents reach a threshold value.
+
+### Bloom filter − These are nothing but quick, nondeterministic, algorithms for testing whether an element is a member of a set. It is a special kind of cache. Bloom filters are accessed after every query.
+
+
 
 ### Keyspace :
 A keyspace in Cassandra is a namespace that defines data replication on nodes. A cluster contains one keyspace per node.The CREATE KEYSPACE statement has two properties: replication and durable_writes.
