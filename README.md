@@ -116,3 +116,4 @@ super column stores a map of sub-columns,super column help to store all column f
 - https://github.com/allegro/cassandra-modeling-kata
 - https://github.com/apache/cassandra
 - https://www.tutorialspoint.com/cassandra/cassandra_data_model.htm
+- https://mattilyra.github.io/2016/05/04/spark-shell-cassandra-connection.html
