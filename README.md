@@ -95,6 +95,27 @@ super column stores a map of sub-columns,super column help to store all column f
 - cols:map<byte[],column>
 
 ----------------------------------------------------------------
+### Apache Spark Load data from Hive to Cassandra
+
+
+              spark-shell \
+                  --num-executors 20 \
+                  --executor-memory 10g \
+                  --driver-memory 10g  \
+                  --executor-cores 5  \
+                  --driver-cores 5  \
+                  --conf spark.executor.memoryOverhead=1024 \
+                  --conf spark.hadoop.metastore.catalog.default=hive \
+                  --conf spark.cassandra.connection.host=127.0.0.1 \
+                  --conf spark.cassandra.auth.username=cassandra \
+                  --conf spark.cassandra.auth.password=cassandra \
+                  --conf spark.cassandra.connection.port=9042 \
+                  --jars /home/vaquarkhan/spark-cassandra-connector-2.3.1-s_2.11.jar,/home/vaquarkhan/commons-configuration-1.8.jar
+
+
+
+
+----------------------------------------------------------------
 - https://www.datastax.com/blog/2012/02/schema-cassandra-11
 - https://pkghosh.wordpress.com/2011/03/02/cassandra-secondary-index-patterns/
 - https://tech.ebayinc.com/engineering/cassandra-data-modeling-best-practices-part-1/
