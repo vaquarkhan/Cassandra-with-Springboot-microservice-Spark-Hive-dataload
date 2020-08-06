@@ -115,7 +115,36 @@ super column stores a map of sub-columns,super column help to store all column f
 
 
 
+                    import com.datastax.spark.connector._
+		 import org.apache.spark.SparkContext
+		 import org.apache.spark.SparkContext._
+		 import org.apache.spark.SparkConf
+		 import org.apache.spark.sql.cassandra._
+		 import org.apache.commons.configuration._
+		 import org.apache.spark.sql.hive.HiveContext
+		 import spark.implicits._
 
+			 //Hive
+			  var df = spark.sql("select * from emp LIMIT 100  ")
+			  
+			  df.count
+                               //Cassandra doc solution not good to use so commented 
+			//sc.stop
+			//Not needed to create separate contxt for cassandra
+			// val sparkConf = new SparkConf()
+			//        .setAppName("Cassandra")
+			//		.setMaster("local")
+			//		.set("spark.hadoop.metastore.catalog.default","hive")
+			//		.set("spark.cassandra.connection.host", "127.0.0.1")
+			//		.set("spark.cassandra.connection.port","port")
+			//		.set("spark.cassandra.auth.username", "username")
+			//		.set("spark.cassandra.auth.password", "password") 
+			// val sc = new SparkContext(sparkConf)
+		  
+			 val table = sc.cassandraTable("tablespace", "table")
+		  
+			 table.count
+		
 ----------------------------------------------------------------
 - https://www.datastax.com/blog/2012/02/schema-cassandra-11
 - https://pkghosh.wordpress.com/2011/03/02/cassandra-secondary-index-patterns/
