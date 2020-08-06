@@ -110,6 +110,7 @@ super column stores a map of sub-columns,super column help to store all column f
                   --conf spark.cassandra.auth.username=cassandra \
                   --conf spark.cassandra.auth.password=cassandra \
                   --conf spark.cassandra.connection.port=9042 \
+                  --packages com.datastax.spark:spark-cassandra-connector-2.3.1-s_2.11.jar \
                   --jars /home/vaquarkhan/spark-cassandra-connector-2.3.1-s_2.11.jar,/home/vaquarkhan/commons-configuration-1.8.jar
 
 
@@ -138,3 +139,4 @@ super column stores a map of sub-columns,super column help to store all column f
 - https://github.com/apache/cassandra
 - https://www.tutorialspoint.com/cassandra/cassandra_data_model.htm
 - https://mattilyra.github.io/2016/05/04/spark-shell-cassandra-connection.html
+- https://shekharsingh.com/blog/2017/01/24/processing-cassandra-data-with-apache-spark-part-2.html
