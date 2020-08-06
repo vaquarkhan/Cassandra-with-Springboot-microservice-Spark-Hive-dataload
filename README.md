@@ -29,19 +29,33 @@ In Cassandra this matters because the data in a particular column family is stor
 
 The key components of Cassandra are as follows −
 
-### Node − It is the place where data is stored.
+### Node 
 
-### Data center − It is a collection of related nodes.
+− It is the place where data is stored.
 
-### Cluster − A cluster is a component that contains one or more data centers.
+### Data center
 
-### Commit log − The commit log is a crash-recovery mechanism in Cassandra. Every write operation is written to the commit log.
+− It is a collection of related nodes.
 
-### Mem-table − A mem-table is a memory-resident data structure. After commit log, the data will be written to the mem-table. Sometimes, for a single-column family, there will be multiple mem-tables.
+### Cluster 
 
-### SSTable − It is a disk file to which the data is flushed from the mem-table when its contents reach a threshold value.
+− A cluster is a component that contains one or more data centers.
 
-### Bloom filter − These are nothing but quick, nondeterministic, algorithms for testing whether an element is a member of a set. It is a special kind of cache. Bloom filters are accessed after every query.
+### Commit log 
+
+− The commit log is a crash-recovery mechanism in Cassandra. Every write operation is written to the commit log.
+
+### Mem-table
+
+− A mem-table is a memory-resident data structure. After commit log, the data will be written to the mem-table. Sometimes, for a single-column family, there will be multiple mem-tables.
+
+### SSTable
+
+− It is a disk file to which the data is flushed from the mem-table when its contents reach a threshold value.
+
+### Bloom filter
+
+− These are nothing but quick, nondeterministic, algorithms for testing whether an element is a member of a set. It is a special kind of cache. Bloom filters are accessed after every query.
 
 
 
@@ -110,12 +124,14 @@ super column stores a map of sub-columns,super column help to store all column f
                   --conf spark.cassandra.auth.username=cassandra \
                   --conf spark.cassandra.auth.password=cassandra \
                   --conf spark.cassandra.connection.port=9042 \
-                  --packages com.datastax.spark:spark-cassandra-connector-2.3.1-s_2.11.jar \
                   --jars /home/vaquarkhan/spark-cassandra-connector-2.3.1-s_2.11.jar,/home/vaquarkhan/commons-configuration-1.8.jar
+		  
+		  ## This is getting jar from maven
+		  --packages com.datastax.spark:spark-cassandra-connector-2.3.1-s_2.11.jar 
 
 
 
-                    import com.datastax.spark.connector._
+                 import com.datastax.spark.connector._
 		 import org.apache.spark.SparkContext
 		 import org.apache.spark.SparkContext._
 		 import org.apache.spark.SparkConf
