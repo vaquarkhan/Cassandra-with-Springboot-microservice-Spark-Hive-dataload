@@ -120,6 +120,7 @@ super column stores a map of sub-columns,super column help to store all column f
                   --driver-cores 5  \
                   --conf spark.executor.memoryOverhead=1024 \
                   --conf spark.hadoop.metastore.catalog.default=hive \
+		  --conf spark.geode.locators=127.0.0.1:[10334] \
                   --conf spark.cassandra.connection.host=127.0.0.1 \
                   --conf spark.cassandra.auth.username=cassandra \
                   --conf spark.cassandra.auth.password=cassandra \
