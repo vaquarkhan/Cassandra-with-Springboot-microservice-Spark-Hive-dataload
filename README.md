@@ -172,18 +172,23 @@ super column stores a map of sub-columns,super column help to store all column f
 
           df.write.format("org.apache.spark.sql.cassandra").options(Map( "table" -> "table", "keyspace" -> "keyspace")).save()
 
-### Read from MYSQL
+         import org.apache.spark.sql.SaveMode._ 
+	
+	  //append
+          df.write
+            .format("org.apache.spark.sql.cassandra")
+            .options(Map("table" -> "table", "keyspace" -> "keyspace"))
+            .mode(org.apache.spark.sql.SaveMode.Append)
+            .save()
+	    
+	  //override
+	df.write
+	  .format("org.apache.spark.sql.cassandra")
+          .mode("overwrite").option("confirm.truncate","true")
+          .options(keyspace="ks",table="testtable")
+          .save()
 
-       df.write.format("jdbc")
-	      .option("batchsize", 100000)
-	.option("truncate", "true")
-	.option("url", "jdbc:mysql://localhost:3307/schema?          useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&user=xxx&password=XXX")
-	 .option("driver", "com.mysql.jdbc.Driver")
-	 .option("dbtable", "table")
-	 .mode("overwrite")
-	 .save()
 
-          df.write.format("org.apache.spark.sql.cassandra").options(Map( "table" -> "table", "keyspace" -> "keyspace")).save()
 
 
 -----------------------------------------------------------------
@@ -207,7 +212,31 @@ Overwrite mode means that when saving a DataFrame to a data source, if data/tabl
 
 Note: If we are using mode(SaveMode.Overwrite) then we should use tableProperties.put("confirm.truncate", "true"); otherwise we will get error message.
 
- 
+- https://gist.github.com/kyrsideris/78c8c0ca73a72a92f009dcb540f0e1df
+---------------------------------------------------------------
+### Read Python:
+
+				>>> from pyspark import SparkContext, SparkConf
+				>>> from pyspark.sql import SQLContext, SparkSession
+				>>> from pyspark.sql.types import *
+				>>> import os
+				>>> spark = SparkSession.builder \
+				...   .appName('SparkCassandraApp') \
+				...   .config('spark.cassandra.connection.host', '127.0.0.1') \
+				...   .config('spark.cassandra.connection.port', '9042') \
+				...   .config('spark.cassandra.output.consistency.level','ONE') \
+				...   .master('local[2]') \
+				...   .getOrCreate()
+				>>> df = spark.read.format("org.apache.spark.sql.cassandra").options(table="emp",keyspace="tutorialspoint").load()
+				>>> df.show()
+				+------+---------+--------+----------+-------+
+				|emp_id| emp_city|emp_name| emp_phone|emp_sal|
+				+------+---------+--------+----------+-------+
+				|     2|Bhopal   |  Vaquar|9848022339|  40000|
+				|     1|Hyderabad|     ram|9848022338|  50000|
+				|     3|  Chennai|  Zidan |9848022330|  45000|
+				+------+---------+--------+----------+-------+
+
 		
 ----------------------------------------------------------------
 - https://www.datastax.com/blog/2012/02/schema-cassandra-11
@@ -233,3 +262,16 @@ Note: If we are using mode(SaveMode.Overwrite) then we should use tablePropertie
 - https://www.tutorialspoint.com/cassandra/cassandra_data_model.htm
 - https://mattilyra.github.io/2016/05/04/spark-shell-cassandra-connection.html
 - https://shekharsingh.com/blog/2017/01/24/processing-cassandra-data-with-apache-spark-part-2.html
+
+-------------------------
+
+### MYSQL
+
+       df.write.format("jdbc")
+	      .option("batchsize", 100000)
+	.option("truncate", "true")
+	.option("url", "jdbc:mysql://localhost:3307/schema?          useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&user=xxx&password=XXX")
+	 .option("driver", "com.mysql.jdbc.Driver")
+	 .option("dbtable", "table")
+	 .mode("overwrite")
+	 .save()
