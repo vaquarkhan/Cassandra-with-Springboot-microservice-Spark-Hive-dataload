@@ -262,6 +262,7 @@ Note: If we are using mode(SaveMode.Overwrite) then we should use tablePropertie
 - https://www.tutorialspoint.com/cassandra/cassandra_data_model.htm
 - https://mattilyra.github.io/2016/05/04/spark-shell-cassandra-connection.html
 - https://shekharsingh.com/blog/2017/01/24/processing-cassandra-data-with-apache-spark-part-2.html
+- https://www.aegissofttech.com/articles/tutorial-spark-cassandra-datastax.html
 
 -------------------------
 
