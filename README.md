@@ -73,6 +73,16 @@ Example :
 
          CREATE KEYSPACE Vkhan WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
 
+### Replication strategy in Cassandra
+  
+         1. SimpleStrategy :It is a simple strategy that is recommended for multiple nodes over multiple racks in a single data center.
+
+         2. LocalStrategy :It is the strategy in which we will use a replication strategy for internal purposes such that is used for system and sys_auth keyspaces are internal  keyspaces. In Cassandra internal keyspaces implicitly handled by Cassandra’s storage architecture for managing authorization and authentication.
+
+
+         3. NetworkTopologyStrategy : It is the strategy in which we can store multiple copies of data on different data centers as per need. This is one important reason to use NetworkTopologyStrategy when multiple replica nodes need to be placed on different data centers.
+
+
 
 ### Creating a Table:
 
