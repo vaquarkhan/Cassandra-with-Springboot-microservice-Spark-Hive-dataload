@@ -192,11 +192,13 @@ super column stores a map of sub-columns,super column help to store all column f
             .save()
 	    
 	  //override
-	df.write
-	  .format("org.apache.spark.sql.cassandra")
-          .mode("overwrite").option("confirm.truncate","true")
-          .options(keyspace="ks",table="testtable")
-          .save()
+	   df.write.
+	  format("org.apache.spark.sql.cassandra")
+	  .options(Map("table" -> "table", "keyspace" -> "keyspace"))
+	  .mode(org.apache.spark.sql.SaveMode.Overwrite)
+	  .option("confirm.truncate","true")
+	  .save()
+   
 
 
 
