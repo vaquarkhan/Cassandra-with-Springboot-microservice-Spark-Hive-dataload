@@ -158,9 +158,56 @@ super column stores a map of sub-columns,super column help to store all column f
 			//		.set("spark.cassandra.auth.password", "password") 
 			// val sc = new SparkContext(sparkConf)
 		  
+		  	//save into cassandra
+		        df.write.format("org.apache.spark.sql.cassandra").options(Map( "table" -> "identities", "keyspace" -> "edlapi")).save()
+
 			 val table = sc.cassandraTable("tablespace", "table")
 		  
 			 table.count
+			 
+----------------------------------------------------------------
+
+### Read from HIVE and save
+	  var df = spark.sql("select * from emp LIMIT 100  ")
+
+          df.write.format("org.apache.spark.sql.cassandra").options(Map( "table" -> "table", "keyspace" -> "keyspace")).save()
+
+### Read from MYSQL
+
+       df.write.format("jdbc")
+	      .option("batchsize", 100000)
+	.option("truncate", "true")
+	.option("url", "jdbc:mysql://localhost:3307/schema?          useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&user=xxx&password=XXX")
+	 .option("driver", "com.mysql.jdbc.Driver")
+	 .option("dbtable", "table")
+	 .mode("overwrite")
+	 .save()
+
+          df.write.format("org.apache.spark.sql.cassandra").options(Map( "table" -> "table", "keyspace" -> "keyspace")).save()
+
+
+-----------------------------------------------------------------
+
+
+### SaveMode.Append
+
+Append mode means that when saving a DataFrame to a data source, if data/table already exists, contents of the DataFrame are expected to be appended to existing data.
+
+### SaveMode.ErrorIfExists
+
+ErrorIfExists mode means that when saving a DataFrame to a data source, if data already exists, an exception is expected to be thrown.
+
+### SaveMode.Ignore
+
+Ignore mode means that when saving a DataFrame to a data source, if data already exists, the save operation is expected to not save the contents of the DataFrame and to not change the existing data.
+
+### SaveMode.Overwrite
+
+Overwrite mode means that when saving a DataFrame to a data source, if data/table already exists, existing data is expected to be overwritten by the contents of the DataFrame.
+
+Note: If we are using mode(SaveMode.Overwrite) then we should use tableProperties.put("confirm.truncate", "true"); otherwise we will get error message.
+
+ 
 		
 ----------------------------------------------------------------
 - https://www.datastax.com/blog/2012/02/schema-cassandra-11
