@@ -251,6 +251,7 @@ Note: If we are using mode(SaveMode.Overwrite) then we should use tablePropertie
 
 		
 ----------------------------------------------------------------
+- https://alexott.blogspot.com/2020/07/spark-effective-joins-with-cassandra.html
 - https://www.datastax.com/blog/2012/02/schema-cassandra-11
 - https://pkghosh.wordpress.com/2011/03/02/cassandra-secondary-index-patterns/
 - https://tech.ebayinc.com/engineering/cassandra-data-modeling-best-practices-part-1/
