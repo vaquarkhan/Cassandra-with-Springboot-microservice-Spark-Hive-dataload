@@ -282,6 +282,7 @@ Note: If we are using mode(SaveMode.Overwrite) then we should use tablePropertie
 
 
 ### Connect Squirrel SQL with Cassnadra
+- https://dbschema.com/download.html
 - https://gist.github.com/attila123/d52d521a0f25fc912ec86a77c7c0a30d
 -------------------------
 
