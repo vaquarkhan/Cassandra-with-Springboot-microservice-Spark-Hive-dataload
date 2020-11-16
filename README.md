@@ -248,8 +248,10 @@ Note: If we are using mode(SaveMode.Overwrite) then we should use tablePropertie
 				|     1|Hyderabad|     ram|9848022338|  50000|
 				|     3|  Chennai|  Zidan |9848022330|  45000|
 				+------+---------+--------+----------+-------+
+				
+				
 
-		
+- https://jasset75.github.io/Spark-Cassandra-Notes/Examples/dataset-join-02.html		
 ----------------------------------------------------------------
 - https://alexott.blogspot.com/2020/07/spark-effective-joins-with-cassandra.html
 - https://www.datastax.com/blog/2012/02/schema-cassandra-11
