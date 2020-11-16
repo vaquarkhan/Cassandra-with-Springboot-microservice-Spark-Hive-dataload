@@ -273,9 +273,6 @@ Note: If we are using mode(SaveMode.Overwrite) then we should use tablePropertie
 - https://github.com/Anant/awesome-cassandra
 - https://github.com/datastax/management-api-for-apache-cassandra
 - https://github.com/allegro/cassandra-modeling-kata
-
-### Connect Squirrel SQL with Cassnadra
-- https://gist.github.com/attila123/d52d521a0f25fc912ec86a77c7c0a30d
 - https://github.com/apache/cassandra
 - https://www.tutorialspoint.com/cassandra/cassandra_data_model.htm
 - https://mattilyra.github.io/2016/05/04/spark-shell-cassandra-connection.html
@@ -283,6 +280,9 @@ Note: If we are using mode(SaveMode.Overwrite) then we should use tablePropertie
 - https://www.aegissofttech.com/articles/tutorial-spark-cassandra-datastax.html
 - https://github.com/bezkoder/spring-boot-data-cassandra
 
+
+### Connect Squirrel SQL with Cassnadra
+- https://gist.github.com/attila123/d52d521a0f25fc912ec86a77c7c0a30d
 -------------------------
 
 ### MYSQL
