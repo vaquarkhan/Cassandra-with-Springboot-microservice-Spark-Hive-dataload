@@ -30,9 +30,7 @@ Most traditional databases store data in the form of records. Each record contai
 
 ![Alt Text](https://blog.pythian.com/wp-content/uploads/RowStore-2018-03-16.png )
 
-![Alt Text](https://phoenixnap.com/kb/wp-content/uploads/2020/05/column-oriented-database.png )
 
-![Alt Text](https://dv-website.s3.amazonaws.com/uploads/2018/09/wcd-pic1.png )
 
 What a column store does is defined in its name. Instead of storing data in rows or records the data is stored in columns.
 when you want to compute the average age you only have to read the data with age information into memory instead of all the data in each row. 
@@ -43,9 +41,13 @@ when you want to compute the average age you only have to read the data with age
 
 If you are going to store data in columns rather than rows the cost of doing single inserts is very high and the number of raw bytes is much larger than what you would normally store.
 
-### Performance COlumn vs row database :
 
-![Alt Text](https://blog.acolyer.org/wp-content/uploads/2018/09/columnstores-fig-1-2.jpeg?w=480)
+![Alt Text](https://phoenixnap.com/kb/wp-content/uploads/2020/05/column-oriented-database.png )
+
+![Alt Text](https://dv-website.s3.amazonaws.com/uploads/2018/09/wcd-pic1.png )
+
+### Performance Column vs row database :
+
 
 
 ### Cassandra :
