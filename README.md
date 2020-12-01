@@ -18,7 +18,7 @@ A column family is a database object that contains columns of related data. It i
 
           }
 
-
+- https://database.guide/what-is-a-column-store-database/
 
 
 ### Cassandra :
