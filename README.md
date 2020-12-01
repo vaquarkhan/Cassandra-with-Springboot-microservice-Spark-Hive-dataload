@@ -296,3 +296,10 @@ Note: If we are using mode(SaveMode.Overwrite) then we should use tablePropertie
 	 .option("dbtable", "table")
 	 .mode("overwrite")
 	 .save()
+
+
+
+###  Cassandra vs Mango vs Hbase vs Write workload
+- https://www.datastax.com/wp-content/uploads/2013/02/WP-Benchmarking-Top-NoSQL-Databases.pdf
+
+ ![Alt Text](https://i.stack.imgur.com/ZlfXZ.png )
