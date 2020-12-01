@@ -323,3 +323,8 @@ For load, Couchbase, HBase, and MongoDB all had to be configured for non-durable
 ### Hbase vs Cassandra 
 ![Alt Text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLSFp5vMGL-gjeLCojqqTvnD7mxsLX2X01uQ&usqp=CAU )
 
+- https://www.datastax.com/blog/cassandra-architecture-and-performance-mid-2014
+
+Single node performance (ops/s) of the most popular NoSQL databases performing synchronously durable writes
+
+ ![Alt Text](https://www.datastax.com/sites/default/files/inline-images/single-node-ycsb-637_0.png )
