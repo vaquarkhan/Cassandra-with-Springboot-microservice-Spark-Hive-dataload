@@ -5,6 +5,11 @@ Cassandra-with-Springboot -notes
 ### Column family:
 A column family is a database object that contains columns of related data. It is a tuple (pair) that consists of a key-value pair, where the key is mapped to a value that is a set of columns. In analogy with relational databases, a column family is as a "table", each key-value pair being a "row". Each column is a tuple (triplet) consisting of a column name, a value, and a timestamp. In a relational database table, this data would be grouped together within a table with other non-related data.
 
+
+- A column family consists of multiple rows.
+- Each row can contain a different number of columns to the other rows. And the columns don’t have to match the columns in the other rows (i.e. they can have different column names, data types, etc).
+- Each column is contained to its row. It doesn’t span all rows like in a relational database. Each column contains a name/value pair, along with a timestamp. Note that this example uses Unix/Epoch time for the timestamp.
+
 ![Alt Text](https://i.stack.imgur.com/rPdYd.jpg )
 
 
