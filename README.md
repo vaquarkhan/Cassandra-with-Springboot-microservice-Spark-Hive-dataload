@@ -303,3 +303,23 @@ Note: If we are using mode(SaveMode.Overwrite) then we should use tablePropertie
 - https://www.datastax.com/wp-content/uploads/2013/02/WP-Benchmarking-Top-NoSQL-Databases.pdf
 
  ![Alt Text](https://i.stack.imgur.com/ZlfXZ.png )
+
+
+### Load process
+For load, Couchbase, HBase, and MongoDB all had to be configured for non-durable writes to complete in a reasonable amount of time, with Cassandra being the only database performing durable write operations. Therefore, the numbers below for Couchbase, HBase, and MongoDB represent non-durable write metrics.
+
+ ![Alt Text](https://www.datastax.com/sites/default/files/inline-images/chart-load-process-v4-rev2.png )
+ 
+- https://www.datastax.com/products/compare/nosql-performance-benchmarks
+
+
+###  Cassandra vs Mysql
+
+
+![Alt Text](https://lh3.googleusercontent.com/proxy/gZD5zMj1LVulUttMB-WXTwT2Jx-_e36WLVIhls2Izjlt17e_i6eqB4hny0chg7Ew5p3V7bCLVFDZDkVNmdOObmz6ho10aSVvupJBYZ7Qn1g )
+- https://adataanalyst.com/data-analysis-resources/a-comparison-between-cassandra-and-mysql/
+- 
+
+### Hbase vs Cassandra 
+![Alt Text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLSFp5vMGL-gjeLCojqqTvnD7mxsLX2X01uQ&usqp=CAU )
+
