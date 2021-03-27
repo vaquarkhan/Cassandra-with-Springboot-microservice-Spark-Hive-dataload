@@ -232,6 +232,7 @@ super column stores a map of sub-columns,super column help to store all column f
 
 ### cassandra-data-model 
 
+- https://github.com/vaquarkhan/Cassandra-Data-Modeling
 - https://docs.datastax.com/en/dse/6.7/cql/cql/ddl/dataModelingApproach.html
 - https://scotch.io/tutorials/five-steps-to-an-awesome-data-model-in-apache-cassandra
 - https://www.simplilearn.com/cassandra-data-model-tutorial-video
