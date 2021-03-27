@@ -240,7 +240,7 @@ super column stores a map of sub-columns,super column help to store all column f
 - https://www.baeldung.com/cassandra-data-modeling
 - https://medium.com/@aymannaitcherif/beginners-guide-to-learn-cassandra-part-1-cassandra-overview-bf1634e4ce30
 - https://www.youtube.com/watch?v=-zyZ35YyT_8
-
+- https://www.youtube.com/watch?v=s1xc1HVsRk0&list=PLalrWAGybpB-L1PGA-NfFu2uiWHEsdscD
 
 -----------------------------------------------------------------
 
