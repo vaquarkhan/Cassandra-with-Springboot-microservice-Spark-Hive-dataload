@@ -228,8 +228,17 @@ super column stores a map of sub-columns,super column help to store all column f
 	  .option("confirm.truncate","true")
 	  .save()
    
+-----------------------------------------------------------------
 
+### cassandra-data-model 
 
+- https://docs.datastax.com/en/dse/6.7/cql/cql/ddl/dataModelingApproach.html
+- https://scotch.io/tutorials/five-steps-to-an-awesome-data-model-in-apache-cassandra
+- https://www.simplilearn.com/cassandra-data-model-tutorial-video
+- https://www.guru99.com/cassandra-data-model-rules.html
+- https://www.baeldung.com/cassandra-data-modeling
+- https://medium.com/@aymannaitcherif/beginners-guide-to-learn-cassandra-part-1-cassandra-overview-bf1634e4ce30
+- https://www.youtube.com/watch?v=-zyZ35YyT_8
 
 
 -----------------------------------------------------------------
